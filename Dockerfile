@@ -1,1 +1,1 @@
-FROM node:16.18
+FROM amazoncorretto:18.0.0-alpine
