@@ -3,5 +3,6 @@
   "extends": [
     "config:base",
     ":dependencyDashboard"
-  ]
+  ],
+  "ignorePresets": ["workarounds:javaLTSVersions"]
 }
