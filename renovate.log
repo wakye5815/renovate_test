@@ -1,0 +1,423 @@
+DEBUG: Using RE2 as regex engine
+DEBUG: Parsing configs
+DEBUG: Checking for config file in /usr/src/app/config.js
+ WARN: cli config dryRun property has been changed to full
+DEBUG: File config
+       "config": {
+         "hostRules": [
+           {
+             "hostType": "docker",
+             "username": "yusukewakita4flinters",
+             "password": "***********"
+           }
+         ]
+       }
+DEBUG: CLI config
+       "config": {
+         "repositories": ["wakye5815/renovate_test"],
+         "dryRun": "full",
+         "token": "***********"
+       }
+DEBUG: Env config
+       "config": {"hostRules": [], "binarySource": "docker", "separateMajorMinor": false}
+DEBUG: Combined config
+       "config": {
+         "hostRules": [
+           {
+             "hostType": "docker",
+             "username": "yusukewakita4flinters",
+             "password": "***********"
+           }
+         ],
+         "binarySource": "docker",
+         "separateMajorMinor": false,
+         "repositories": ["wakye5815/renovate_test"],
+         "dryRun": "full",
+         "token": "***********"
+       }
+DEBUG: Found valid git version: 2.38.1
+DEBUG: Using default github endpoint: https://api.github.com/
+DEBUG: Platform config
+       "platformConfig": {
+         "hostType": "github",
+         "endpoint": "https://api.github.com/",
+         "isGHApp": false,
+         "isGhe": false,
+         "userDetails": {"username": "wakye5815", "name": null},
+         "userEmail": "49160299+wakye5815@users.noreply.github.com"
+       },
+       "renovateUsername": "wakye5815"
+DEBUG: Using platform gitAuthor: null <49160299+wakye5815@users.noreply.github.com>
+DEBUG: Adding token authentication for api.github.com to hostRules
+DEBUG: Using baseDir: /tmp/renovate
+DEBUG: Using cacheDir: /tmp/renovate/cache
+DEBUG: Using containerbaseDir: /tmp/renovate/cache/containerbase
+DEBUG: Initializing Renovate internal cache into /tmp/renovate/cache/renovate/renovate-cache-v1
+DEBUG: Commits limit = null
+DEBUG: Setting global hostRules
+DEBUG: Adding token authentication for api.github.com to hostRules
+DEBUG: validatePresets()
+DEBUG: Reinitializing hostRules for repo
+DEBUG: Clearing hostRules
+DEBUG: Adding token authentication for api.github.com to hostRules
+ INFO: No docker daemon found
+ INFO: Repository started (repository=wakye5815/renovate_test)
+       "renovateVersion": "34.48.4"
+DEBUG: Using localDir: /tmp/renovate/repos/github/wakye5815/renovate_test (repository=wakye5815/renovate_test)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=wakye5815/renovate_test)
+DEBUG: initRepo("wakye5815/renovate_test") (repository=wakye5815/renovate_test)
+DEBUG: wakye5815/renovate_test default branch = main (repository=wakye5815/renovate_test)
+DEBUG: Using personal access token for git init (repository=wakye5815/renovate_test)
+DEBUG: Resetting npmrc (repository=wakye5815/renovate_test)
+DEBUG: detectSemanticCommits() (repository=wakye5815/renovate_test)
+DEBUG: Initializing git repository into /tmp/renovate/repos/github/wakye5815/renovate_test (repository=wakye5815/renovate_test)
+DEBUG: Performing blobless clone (repository=wakye5815/renovate_test)
+DEBUG: git clone completed (repository=wakye5815/renovate_test)
+       "durationMs": 2001
+DEBUG: latest repository commit (repository=wakye5815/renovate_test)
+       "latestCommit": {
+         "hash": "c8d20f918735d1c824d798d9c4e3a99dfccb49a8",
+         "date": "2022-12-06T01:48:11+09:00",
+         "message": "Merge pull request #6 from wakye5815/renovate/amazoncorretto-18.x",
+         "refs": "HEAD -> main, origin/main, origin/HEAD",
+         "body": "Update amazoncorretto Docker tag to v18.0.1",
+         "author_name": "wakye5815",
+         "author_email": "49160299+wakye5815@users.noreply.github.com"
+       }
+DEBUG: getCommitMessages (repository=wakye5815/renovate_test)
+DEBUG: Semantic commits detection: unknown (repository=wakye5815/renovate_test)
+DEBUG: No semantic commits detected (repository=wakye5815/renovate_test)
+DEBUG: checkOnboarding() (repository=wakye5815/renovate_test)
+DEBUG: isOnboarded() (repository=wakye5815/renovate_test)
+DEBUG: findFile(renovate.json) (repository=wakye5815/renovate_test)
+DEBUG: Config file exists, fileName: renovate.json (repository=wakye5815/renovate_test)
+DEBUG: Retrieving issueList (repository=wakye5815/renovate_test)
+DEBUG: Retrieved 1 issues (repository=wakye5815/renovate_test)
+DEBUG: Repo is onboarded (repository=wakye5815/renovate_test)
+DEBUG: Found renovate.json config file (repository=wakye5815/renovate_test)
+DEBUG: Repository config (repository=wakye5815/renovate_test)
+       "fileName": "renovate.json",
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:base", ":dependencyDashboard"],
+         "ignorePresets": ["workarounds:javaLTSVersions"]
+       }
+DEBUG: migrateAndValidate() (repository=wakye5815/renovate_test)
+DEBUG: No config migration necessary (repository=wakye5815/renovate_test)
+DEBUG: massaged config (repository=wakye5815/renovate_test)
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:base", ":dependencyDashboard"],
+         "ignorePresets": ["workarounds:javaLTSVersions"]
+       }
+DEBUG: migrated config (repository=wakye5815/renovate_test)
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:base", ":dependencyDashboard"],
+         "ignorePresets": ["workarounds:javaLTSVersions"]
+       }
+DEBUG: Ignoring preset workarounds:javaLTSVersions in [config:base, workarounds:all] (repository=wakye5815/renovate_test)
+DEBUG: Setting hostRules from config (repository=wakye5815/renovate_test)
+DEBUG: Found repo ignorePaths (repository=wakye5815/renovate_test)
+       "ignorePaths": [
+         "**/node_modules/**",
+         "**/bower_components/**",
+         "**/vendor/**",
+         "**/examples/**",
+         "**/__tests__/**",
+         "**/test/**",
+         "**/tests/**",
+         "**/__fixtures__/**"
+       ]
+DEBUG: No vulnerability alerts found (repository=wakye5815/renovate_test)
+DEBUG: No vulnerability alerts found (repository=wakye5815/renovate_test)
+DEBUG: findIssue(Dependency Dashboard) (repository=wakye5815/renovate_test)
+DEBUG: Found issue 5 (repository=wakye5815/renovate_test)
+DEBUG: No baseBranches (repository=wakye5815/renovate_test)
+DEBUG: extract() (repository=wakye5815/renovate_test)
+DEBUG: Setting current branch to main (repository=wakye5815/renovate_test)
+DEBUG: latest commit (repository=wakye5815/renovate_test)
+       "branchName": "main",
+       "latestCommitDate": "2022-12-06T01:48:11+09:00"
+DEBUG: Using file match: (^|/)tasks/[^/]+\.ya?ml$ for manager ansible (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)requirements\.ya?ml$ for manager ansible-galaxy (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)galaxy\.ya?ml$ for manager ansible-galaxy (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.tool-versions$ for manager asdf (repository=wakye5815/renovate_test)
+DEBUG: Using file match: azure.*pipelines?.*\.ya?ml$ for manager azure-pipelines (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)batect(-bundle)?\.yml$ for manager batect (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)batect$ for manager batect-wrapper (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)WORKSPACE(|\.bazel)$ for manager bazel (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.bzl$ for manager bazel (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)\.bazelversion$ for manager bazelisk (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.?bitbucket-pipelines\.ya?ml$ for manager bitbucket-pipelines (repository=wakye5815/renovate_test)
+DEBUG: Using file match: buildkite\.ya?ml for manager buildkite (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.buildkite/.+\.ya?ml$ for manager buildkite (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)Gemfile$ for manager bundler (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.cake$ for manager cake (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)Cargo\.toml$ for manager cargo (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.circleci/config\.yml$ for manager circleci (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)cloudbuild\.ya?ml for manager cloudbuild (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)Podfile$ for manager cocoapods (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)([\w-]*)composer\.json$ for manager composer (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)conanfile\.(txt|py)$ for manager conan (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)(?:deps|bb)\.edn$ for manager deps-edn (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)(?:docker-)?compose[^/]*\.ya?ml$ for manager docker-compose (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/|\.)Dockerfile$ for manager dockerfile (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)Dockerfile[^/]*$ for manager dockerfile (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.drone\.yml$ for manager droneci (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)fleet\.ya?ml for manager fleet (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)flux-system\/(?:.+\/)?gotk-components\.yaml$ for manager flux (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)\.fvm\/fvm_config\.json$ for manager fvm (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.gitmodules$ for manager git-submodules (repository=wakye5815/renovate_test)
+DEBUG: Using file match: ^(workflow-templates|\.github\/workflows)\/[^/]+\.ya?ml$ for manager github-actions (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)action\.ya?ml$ for manager github-actions (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.gitlab-ci\.yml$ for manager gitlabci (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.gitlab-ci\.yml$ for manager gitlabci-include (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)go\.mod$ for manager gomod (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.gradle(\.kts)?$ for manager gradle (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)gradle\.properties$ for manager gradle (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)gradle\/.+\.toml$ for manager gradle (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.versions\.toml$ for manager gradle (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)gradle/wrapper/gradle-wrapper\.properties$ for manager gradle-wrapper (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)requirements\.yaml$ for manager helm-requirements (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)values\.yaml$ for manager helm-values (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)helmfile\.yaml$ for manager helmfile (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)Chart\.yaml$ for manager helmv3 (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)bin/hermit$ for manager hermit (repository=wakye5815/renovate_test)
+DEBUG: Using file match: ^Formula/[^/]+[.]rb$ for manager homebrew (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.html?$ for manager html (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)plugins\.(txt|ya?ml)$ for manager jenkins (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)jsonnetfile\.json$ for manager jsonnet-bundler (repository=wakye5815/renovate_test)
+DEBUG: Using file match: ^.+\.main\.kts$ for manager kotlin-script (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)kustomization\.ya?ml$ for manager kustomize (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)project\.clj$ for manager leiningen (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/|\.)pom\.xml$ for manager maven (repository=wakye5815/renovate_test)
+DEBUG: Using file match: ^(((\.mvn)|(\.m2))/)?settings\.xml$ for manager maven (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)package\.js$ for manager meteor (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)Mintfile$ for manager mint (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)mix\.exs$ for manager mix (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)flake\.nix$ for manager nix (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.node-version$ for manager nodenv (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)package\.json$ for manager npm (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.(?:cs|fs|vb)proj$ for manager nuget (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.(?:props|targets)$ for manager nuget (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)dotnet-tools\.json$ for manager nuget (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)global\.json$ for manager nuget (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.nvmrc$ for manager nvm (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)([\w-]*)requirements\.(txt|pip)$ for manager pip_requirements (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)setup\.py$ for manager pip_setup (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)Pipfile$ for manager pipenv (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager poetry (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.pre-commit-config\.yaml$ for manager pre-commit (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)pubspec\.ya?ml$ for manager pub (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)Puppetfile$ for manager puppet (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.python-version$ for manager pyenv (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.ruby-version$ for manager ruby-version (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.sbt$ for manager sbt (repository=wakye5815/renovate_test)
+DEBUG: Using file match: project/[^/]*.scala$ for manager sbt (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)setup\.cfg$ for manager setup-cfg (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)Package\.swift for manager swift (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.tf$ for manager terraform (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.terraform-version$ for manager terraform-version (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)terragrunt\.hcl$ for manager terragrunt (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.terragrunt-version$ for manager terragrunt-version (repository=wakye5815/renovate_test)
+DEBUG: Using file match: \.tflint\.hcl$ for manager tflint-plugin (repository=wakye5815/renovate_test)
+DEBUG: Using file match: ^\.travis\.yml$ for manager travis (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|/)\.vela\.ya?ml$ for manager velaci (repository=wakye5815/renovate_test)
+DEBUG: Using file match: (^|\/)\.woodpecker[^/]*\.ya?ml$ for manager woodpecker (repository=wakye5815/renovate_test)
+DEBUG: Matched 2 file(s) for manager dockerfile: correto/Dockerfile, node/Dockerfile (repository=wakye5815/renovate_test)
+DEBUG: Found dockerfile package files (repository=wakye5815/renovate_test)
+DEBUG: Found 2 package file(s) (repository=wakye5815/renovate_test)
+ INFO: Dependency extraction complete (repository=wakye5815/renovate_test, baseBranch=main)
+       "stats": {
+         "managers": {"dockerfile": {"fileCount": 2, "depCount": 2}},
+         "total": {"fileCount": 2, "depCount": 2}
+       }
+DEBUG: getLabels(https://index.docker.io, library/amazoncorretto, latest) (repository=wakye5815/renovate_test)
+DEBUG: getManifestResponse(https://index.docker.io, library/amazoncorretto, latest, get) (repository=wakye5815/renovate_test)
+DEBUG: getLabels(https://index.docker.io, library/node, latest) (repository=wakye5815/renovate_test)
+DEBUG: getManifestResponse(https://index.docker.io, library/node, latest, get) (repository=wakye5815/renovate_test)
+DEBUG: getManifestResponse(https://index.docker.io, library/amazoncorretto, sha256:fecce5dd42e4a22eb17bad71708ddc46c1b6ad840e1a56f3157335f3c3be7ff9, get) (repository=wakye5815/renovate_test)
+DEBUG: getManifestResponse(https://index.docker.io, library/node, sha256:17fbe9961c264ad69484fbcb5e35242850f24ab12eb7c01f03de5a91c7819b65, get) (repository=wakye5815/renovate_test)
+DEBUG: PackageFiles.add() - Package file saved for base branch (repository=wakye5815/renovate_test, baseBranch=main)
+DEBUG: Package releases lookups complete (repository=wakye5815/renovate_test, baseBranch=main)
+DEBUG: branchifyUpgrades (repository=wakye5815/renovate_test)
+DEBUG: 1 flattened updates found: node (repository=wakye5815/renovate_test)
+DEBUG: Returning 1 branch(es) (repository=wakye5815/renovate_test)
+DEBUG: config.repoIsOnboarded=true (repository=wakye5815/renovate_test)
+DEBUG: packageFiles with updates (repository=wakye5815/renovate_test, baseBranch=main)
+       "config": {
+         "dockerfile": [
+           {
+             "packageFile": "correto/Dockerfile",
+             "deps": [
+               {
+                 "depName": "amazoncorretto",
+                 "currentValue": "18.0.1-alpine3.12",
+                 "replaceString": "amazoncorretto:18.0.1-alpine3.12",
+                 "autoReplaceStringTemplate": "{{depName}}{{#if newValue}}:{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}",
+                 "datasource": "docker",
+                 "depType": "final",
+                 "depIndex": 0,
+                 "updates": [],
+                 "warnings": [],
+                 "versioning": "docker",
+                 "currentVersion": "18.0.1",
+                 "fixedVersion": "18.0.1-alpine3.12"
+               }
+             ]
+           },
+           {
+             "packageFile": "node/Dockerfile",
+             "deps": [
+               {
+                 "depName": "node",
+                 "currentValue": "16.18",
+                 "replaceString": "node:16.18",
+                 "autoReplaceStringTemplate": "{{depName}}{{#if newValue}}:{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}",
+                 "datasource": "docker",
+                 "depType": "final",
+                 "depIndex": 0,
+                 "updates": [
+                   {
+                     "bucket": "latest",
+                     "newVersion": "19.2",
+                     "newValue": "19.2",
+                     "newMajor": 19,
+                     "newMinor": 2,
+                     "updateType": "major",
+                     "branchName": "renovate/node-19.x"
+                   }
+                 ],
+                 "warnings": [],
+                 "versioning": "docker",
+                 "sourceUrl": "https://github.com/nodejs/node",
+                 "currentVersion": "16.18",
+                 "isSingleVersion": true,
+                 "fixedVersion": "16.18"
+               }
+             ]
+           }
+         ]
+       }
+DEBUG: processRepo() (repository=wakye5815/renovate_test)
+DEBUG: Processing 1 branch: renovate/node-19.x (repository=wakye5815/renovate_test)
+DEBUG: Calculating hourly PRs remaining (repository=wakye5815/renovate_test)
+DEBUG: getPrList success (repository=wakye5815/renovate_test)
+       "pullsTotal": 0,
+       "requestsTotal": 1,
+       "apiQuotaAffected": true
+DEBUG: currentHourStart=2022-12-05T16:00:00.000+00:00 (repository=wakye5815/renovate_test)
+DEBUG: PR hourly limit remaining: 2 (repository=wakye5815/renovate_test)
+DEBUG: Calculating prConcurrentLimit (10) (repository=wakye5815/renovate_test)
+DEBUG: getBranchPr(renovate/node-19.x) (repository=wakye5815/renovate_test)
+DEBUG: findPr(renovate/node-19.x, undefined, open) (repository=wakye5815/renovate_test)
+DEBUG: findPr(renovate/node-19.x, undefined, closed) (repository=wakye5815/renovate_test)
+DEBUG: 0 PRs are currently open (repository=wakye5815/renovate_test)
+DEBUG: PR concurrent limit remaining: 10 (repository=wakye5815/renovate_test)
+DEBUG: Calculated maximum PRs remaining this run: 2 (repository=wakye5815/renovate_test)
+DEBUG: PullRequests limit = 2 (repository=wakye5815/renovate_test)
+DEBUG: Calculating hourly PRs remaining (repository=wakye5815/renovate_test)
+DEBUG: currentHourStart=2022-12-05T16:00:00.000+00:00 (repository=wakye5815/renovate_test)
+DEBUG: PR hourly limit remaining: 2 (repository=wakye5815/renovate_test)
+DEBUG: Calculating branchConcurrentLimit (10) (repository=wakye5815/renovate_test)
+DEBUG: 1 already existing branches found: renovate/node-19.x (repository=wakye5815/renovate_test)
+DEBUG: Branch concurrent limit remaining: 9 (repository=wakye5815/renovate_test)
+DEBUG: Calculated maximum branches remaining this run: 2 (repository=wakye5815/renovate_test)
+DEBUG: Branches limit = 2 (repository=wakye5815/renovate_test)
+DEBUG: syncBranchState() (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: syncBranchState(): Branch cache not found, creating minimal branchState (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: getBranchPr(renovate/node-19.x) (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: findPr(renovate/node-19.x, undefined, open) (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: findPr(renovate/node-19.x, undefined, closed) (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: branchExists=true (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: dependencyDashboardCheck=undefined (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: recreateClosed is false (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: findPr(renovate/node-19.x, Update Node.js to v19, !open) (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: prAlreadyExisted=false (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: Checking if PR has been edited (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: branch.isModified(): using git to calculate (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: branch.isModified() = true (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+       "branchName": "renovate/node-19.x",
+       "lastAuthor": "29139614+renovate[bot]@users.noreply.github.com",
+       "gitAuthorEmail": "49160299+wakye5815@users.noreply.github.com"
+DEBUG: findPr(renovate/node-19.x, undefined, !open) (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: Branch has been edited but found no PR - skipping (repository=wakye5815/renovate_test, branch=renovate/node-19.x)
+DEBUG: getBranchPr(renovate/node-19.x) (repository=wakye5815/renovate_test)
+DEBUG: findPr(renovate/node-19.x, undefined, open) (repository=wakye5815/renovate_test)
+DEBUG: findPr(renovate/node-19.x, undefined, closed) (repository=wakye5815/renovate_test)
+DEBUG: branch.isBehindBase(): using git to calculate (repository=wakye5815/renovate_test)
+DEBUG: branch.isBehindBase(): true (repository=wakye5815/renovate_test)
+       "currentBranch": "main",
+       "currentBranchSha": "c8d20f918735d1c824d798d9c4e3a99dfccb49a8"
+DEBUG: isBranchConflicted(main, renovate/node-19.x) (repository=wakye5815/renovate_test)
+DEBUG: branch.isConflicted(): using git to calculate (repository=wakye5815/renovate_test)
+DEBUG: Setting git author name: null (repository=wakye5815/renovate_test)
+DEBUG: Setting git author email: 49160299+wakye5815@users.noreply.github.com (repository=wakye5815/renovate_test)
+DEBUG: branch.isConflicted(): false (repository=wakye5815/renovate_test)
+DEBUG: Ensuring Dependency Dashboard (repository=wakye5815/renovate_test)
+ INFO: DRY-RUN: Would ensure Dependency Dashboard (repository=wakye5815/renovate_test)
+       "title": "Dependency Dashboard"
+ INFO: DRY-RUN: Would save repository cache. (repository=wakye5815/renovate_test)
+DEBUG: Removing any stale branches (repository=wakye5815/renovate_test)
+DEBUG: config.repoIsOnboarded=true (repository=wakye5815/renovate_test)
+DEBUG: Branch lists (repository=wakye5815/renovate_test)
+       "branchList": ["renovate/node-19.x"],
+       "renovateBranches": ["renovate/node-19.x"]
+DEBUG: remainingBranches= (repository=wakye5815/renovate_test)
+DEBUG: No branches to clean up (repository=wakye5815/renovate_test)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=wakye5815/renovate_test)
+DEBUG: Branch summary (repository=wakye5815/renovate_test)
+       "cacheModified": undefined,
+       "baseBranches": [{"branchName": "main", "sha": "c8d20f918735d1c824d798d9c4e3a99dfccb49a8"}],
+       "branches": [
+         {
+           "automerge": false,
+           "baseBranch": "main",
+           "baseBranchSha": "c8d20f918735d1c824d798d9c4e3a99dfccb49a8",
+           "branchName": "renovate/node-19.x",
+           "branchSha": "5c6cbd2a287747eada33380294f3aa10d4aa7057",
+           "isModified": true,
+           "isPristine": false
+         }
+       ],
+       "inactiveBranches": []
+DEBUG: Renovate repository PR statistics (repository=wakye5815/renovate_test)
+       "stats": {"total": 0, "open": 0, "closed": 0, "merged": 0}
+DEBUG: Repository result: done, status: onboarded, enabled: true, onboarded: true (repository=wakye5815/renovate_test)
+DEBUG: Repository timing splits (milliseconds) (repository=wakye5815/renovate_test)
+       "splits": {"init": 5057, "extract": 750, "lookup": 8218, "onboarding": 0, "update": 539},
+       "total": 16089
+DEBUG: Package cache statistics (repository=wakye5815/renovate_test)
+       "get": {"count": 4, "avgMs": 3, "medianMs": 0, "maxMs": 7},
+       "set": {"count": 4, "avgMs": 41, "medianMs": 5, "maxMs": 130}
+DEBUG: http statistics (repository=wakye5815/renovate_test)
+       "urls": {
+         "https://api.github.com/graphql (POST,200)": 2,
+         "https://api.github.com/repos/wakye5815/renovate_test/issues/5 (GET,200)": 2,
+         "https://api.github.com/repos/wakye5815/renovate_test/pulls (GET,200)": 1,
+         "https://auth.docker.io/token (GET,200)": 2,
+         "https://index.docker.io/v2/ (GET,401)": 1,
+         "https://index.docker.io/v2/library/amazoncorretto/blobs/sha256:d885899b12131609af53eee34147a6493d3c697135be11585d91a69fdc769e87 (GET,200)": 1,
+         "https://index.docker.io/v2/library/amazoncorretto/manifests/latest (GET,200)": 1,
+         "https://index.docker.io/v2/library/amazoncorretto/manifests/sha256:fecce5dd42e4a22eb17bad71708ddc46c1b6ad840e1a56f3157335f3c3be7ff9 (GET,200)": 1,
+         "https://index.docker.io/v2/library/amazoncorretto/tags/list (GET,200)": 1,
+         "https://index.docker.io/v2/library/amazoncorretto/tags/list (GET,401)": 1,
+         "https://index.docker.io/v2/library/node/blobs/sha256:5f352850ed59903cab9d213d0d6c272e750215fba436f875fbde0d4b1b710541 (GET,200)": 1,
+         "https://index.docker.io/v2/library/node/manifests/latest (GET,200)": 1,
+         "https://index.docker.io/v2/library/node/manifests/sha256:17fbe9961c264ad69484fbcb5e35242850f24ab12eb7c01f03de5a91c7819b65 (GET,200)": 1,
+         "https://index.docker.io/v2/library/node/tags/list (GET,200)": 1,
+         "https://index.docker.io/v2/library/node/tags/list (GET,401)": 1
+       },
+       "hostStats": {
+         "api.github.com": {"requestCount": 5, "requestAvgMs": 468, "queueAvgMs": 0},
+         "auth.docker.io": {"requestCount": 2, "requestAvgMs": 737, "queueAvgMs": 0},
+         "index.docker.io": {"requestCount": 11, "requestAvgMs": 990, "queueAvgMs": 0}
+       },
+       "totalRequests": 18
+DEBUG: dns cache (repository=wakye5815/renovate_test)
+       "hosts": []
+ INFO: Repository finished (repository=wakye5815/renovate_test)
+       "cloned": true,
+       "durationMs": 16089
+DEBUG: Renovate exiting
