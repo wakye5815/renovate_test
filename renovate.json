@@ -9,9 +9,8 @@
     {
       "fileMatch": ["^Dockerfile$"],
       "matchStrings": [
-        "depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\nENV.*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
-      "datasourceTemplate": "repology",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
