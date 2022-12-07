@@ -7,7 +7,7 @@
   "ignorePresets": ["workarounds:javaLTSVersions"],
   "regexManagers": [
     {
-      "fileMatch": ["^Dockerfile$"],
+      "fileMatch": ["(^|/)Dockerfile[^/]*$"],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\nENV.*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
