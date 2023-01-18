@@ -1,4 +1,4 @@
-FROM amazoncorretto:18.0.1-alpine3.15
+FROM amazoncorretto:19.0.2-alpine3.15
 
 # renovate: datasource=repology depName=alpine_3_15/curl versioning=loose
 ENV CURL_VERSION="7.79.1-r3"
