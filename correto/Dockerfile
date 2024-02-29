@@ -4,7 +4,7 @@ FROM amazoncorretto:18.0.1-alpine3.15
 ENV CURL_VERSION="7.79.1-r3"
 
 # renovate: datasource=github-releases depName=stedolan/jq versioning=regex:^jq-(?<major>\d+)(\.(?<minor>\d+))$
-ENV JQ_VERSION="jq-1.5"
+ENV JQ_VERSION="jq-1.7"
 
 RUN apk update
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.14/main curl=${CURL_VERSION}
